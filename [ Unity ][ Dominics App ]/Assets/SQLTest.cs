@@ -23,10 +23,10 @@ public class SQLTest : MonoBehaviour
             private void OnEnable() => _target = (SQLTest) target;
             public override void OnInspectorGUI()
             {
-                if (Application.isPlaying && GUILayout.Button("Run Query")) _target.RunOnConnection(_target.RunTextBasedQuery);
+                if (Application.isPlaying && GUILayout.Button("Run Query")) NetworkRail.SQL.SQLManager.RunOnConnection(_target.RunTextBasedQuery);
                 
-                if (Application.isPlaying && GUILayout.Button("Run Stored Procedure Query")) _target.RunOnConnection(_target.RunStoredProcedureQuery);
-                if (Application.isPlaying && GUILayout.Button("Run Non Query Stored Procedure")) _target.RunOnConnection(_target.RunNonQueryStoredProcedure);
+                if (Application.isPlaying && GUILayout.Button("Run Stored Procedure Query")) NetworkRail.SQL.SQLManager.RunOnConnection(_target.RunStoredProcedureQuery);
+                if (Application.isPlaying && GUILayout.Button("Run Non Query Stored Procedure")) NetworkRail.SQL.SQLManager.RunOnConnection(_target.RunNonQueryStoredProcedure);
               
                 _showBaseInspector = EditorGUILayout.Foldout(_showBaseInspector, "Base Inspector");
                 if (_showBaseInspector) base.OnInspectorGUI();
@@ -37,30 +37,7 @@ public class SQLTest : MonoBehaviour
 
 
 
-
-
-    private void RunOnConnection(Action<SqlConnection> action)
-    {
-        try
-        {
-            using SqlConnection connection = new SqlConnection(new SqlConnectionStringBuilder
-            {
-                DataSource = "networkrail.database.windows.net", 
-                UserID = "Net_Rail", 
-                Password = "AEpgJ#K$LO=ZM^%#|", 
-                InitialCatalog = "Network_Rail"
-            }.ConnectionString);
-            
-            connection.Open();
-            action.Invoke(connection);
-        }
-        catch (Exception e)
-        {
-            Console.WriteLine(e);
-            throw;
-        }
-    }
-
+    
 
     
     private void RunTextBasedQuery(SqlConnection connection)
