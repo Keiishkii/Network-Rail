@@ -1,5 +1,5 @@
 <ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:VisualElement name="Canvas" style="left: 0; top: 0; right: 0; bottom: 0; height: 100%; width: 100%;">
+    <ui:VisualElement name="Canvas" style="left: 0; top: 0; right: 17px; bottom: 0; height: 100%; width: 100%;">
         <ui:GroupBox name="LoginContainer" style="left: auto; top: auto; right: auto; position: relative; width: auto;">
             <ui:DropdownField label="Dropdown" index="-1" choices="System.Collections.Generic.List`1[System.String]" name="DepartmentDropdown" />
             <ui:TextField picking-mode="Ignore" label="Username" value="filler text" text="Username" name="UsernameField" style="-unity-text-align: middle-left; opacity: 1; left: auto; right: auto;" />

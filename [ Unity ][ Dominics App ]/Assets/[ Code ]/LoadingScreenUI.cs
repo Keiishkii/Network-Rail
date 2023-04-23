@@ -33,6 +33,6 @@ public class LoadingScreenUI : MonoBehaviour
             yield return null;
         }
         
-        UIManager.TransitionPanels(ref _homeScreenPanel, ref _gameObject);
+        UIManagerOld.TransitionPanels(ref _homeScreenPanel, ref _gameObject);
     }
 }

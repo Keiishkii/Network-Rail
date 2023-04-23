@@ -3,7 +3,7 @@ using NetworkRail.SQL;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class UIController : MonoBehaviour
+public class UILogin : MonoBehaviour
 {
 	#region Components
 	// - - -
@@ -29,7 +29,6 @@ public class UIController : MonoBehaviour
 	private void Awake()
 	{
 		_UIDocument = GetComponent<UIDocument>();
-
 		_rootVisualElement = _UIDocument.rootVisualElement;
 		
 		_departmentDropdown = _rootVisualElement.Q<DropdownField>("DepartmentDropdown");
@@ -37,11 +36,12 @@ public class UIController : MonoBehaviour
 		_passwordField = _rootVisualElement.Q<TextField>("PasswordField");
 		_loginButton = _rootVisualElement.Q<Button>("LoginButton");
 
-		PopulateDepartmentDropdownContent();
+		SetUIDefaults();
 	}
 
 	private void OnEnable()
 	{
+		_departmentDropdown.RegisterValueChangedCallback(DepartmentDropdownValueChanged);
 		_loginButton.clicked += OnLoginButtonPressed;
 	}
 
@@ -52,14 +52,34 @@ public class UIController : MonoBehaviour
 
 
 
-	private void PopulateDepartmentDropdownContent()
+	private void SetUIDefaults()
 	{
-		_departmentDropdown.choices = SQLManager.GetListOfDepartments();
+		_departmentDropdown.choices = SQLManager.QueryListOfDepartments();
+		
+		_usernameField.SetEnabled(false);
+		_passwordField.SetEnabled(false);
+	}
+	
+	
+	
+	private void DepartmentDropdownValueChanged(ChangeEvent<string> value)
+	{
+		_usernameField.SetEnabled(true);
+		_passwordField.SetEnabled(true);
 	}
 	
 	private void OnLoginButtonPressed()
 	{
+		Debug.Log($"Department: {_departmentDropdown.text}");
 		Debug.Log($"Username: {_usernameField.text}");
 		Debug.Log($"Password: {_passwordField.text}");
+
+		(bool successfulLogin, string message) = SQLManager.QueryLogin(_departmentDropdown.value, _usernameField.text, _passwordField.text);
+		if (successfulLogin)
+		{
+			
+		}
+		
+		Debug.Log($"[{((successfulLogin) ? ("SUCCESS") : ("FAILURE"))}] Password: {message}");
 	}
 }

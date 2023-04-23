@@ -35,22 +35,47 @@ namespace NetworkRail
             
             
             
-            public static List<string> GetListOfDepartments()
+            public static List<string> QueryListOfDepartments()
             {
                 List<string> departments = new List<string>();
                 RunOnConnection((connection) =>
                 {
-                    String storeProcedure = "EXECUTE Network_Rail.dbo.List_Job_Skill 'Off-Track'";
-                    using SqlCommand command = new SqlCommand(storeProcedure, connection)
-                    {
-                        CommandType = CommandType.StoredProcedure
-                    };
-
+                    String storeProcedure = "[dbo].[List_Job_Department]";
+                    
+                    using SqlCommand command = new SqlCommand(storeProcedure, connection) { CommandType = CommandType.StoredProcedure };
                     using SqlDataReader reader = command.ExecuteReader();
+                    
                     while (reader.Read()) departments.Add(reader.GetString(0));
                 });
                 
                 return departments;
+            }
+            
+            public static (bool, string) QueryLogin(string department, string username, string password)
+            {
+                int successfullyLoggedIn = 0;
+                string message = "";
+                
+                RunOnConnection((connection) =>
+                {
+                    String storeProcedure = "[dbo].[Validate_Login]";
+                    
+                    using SqlCommand command = new SqlCommand(storeProcedure, connection) { CommandType = CommandType.StoredProcedure };
+                    command.Parameters.Add("@DEPARTMENT", SqlDbType.VarChar).Value = department;
+                    command.Parameters.Add("@USER_LOGIN", SqlDbType.VarChar).Value = username;
+                    command.Parameters.Add("@PASSWORD", SqlDbType.VarChar).Value = password;
+                    
+                    using SqlDataReader reader = command.ExecuteReader();
+
+                    while (reader.Read())
+                    {
+                        successfullyLoggedIn = reader.GetInt32(0);
+                        message = reader.GetString(1);
+                    };
+                });
+                
+                Debug.Log(successfullyLoggedIn);
+                return ((successfullyLoggedIn == 1), message);
             }
         }
     }

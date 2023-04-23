@@ -12,5 +12,5 @@ public class SetupController : MonoBehaviour
     
     
     
-    private void Start() => UIManager.FadePanelIn(ref _loadPanel);
+    private void Start() => UIManagerOld.FadePanelIn(ref _loadPanel);
 }

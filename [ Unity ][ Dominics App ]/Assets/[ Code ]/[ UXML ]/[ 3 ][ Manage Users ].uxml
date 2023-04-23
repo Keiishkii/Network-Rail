@@ -1,0 +1,15 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Label text="Manage Users" display-tooltip-when-elided="true" name="PageTitle" />
+    <ui:GroupBox name="UsersContainer">
+        <ui:Label text="Label" display-tooltip-when-elided="true" name="UsersContainerTitle" />
+        <ui:ScrollView name="UserList">
+            <ui:GroupBox name="User">
+                <ui:Label text="Dave Brown" display-tooltip-when-elided="true" name="UserNameTitle" />
+                <ui:Button text="PTS" display-tooltip-when-elided="true" name="PTSButton" />
+                <ui:Button text="JC" display-tooltip-when-elided="true" name="JCButton" />
+            </ui:GroupBox>
+        </ui:ScrollView>
+    </ui:GroupBox>
+    <ui:Button text="Create User" display-tooltip-when-elided="true" name="CreateUser" />
+    <ui:Button text="Return to Portal" display-tooltip-when-elided="true" name="Return" />
+</ui:UXML>

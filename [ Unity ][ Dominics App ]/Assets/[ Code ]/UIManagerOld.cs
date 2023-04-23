@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class UIManager : MonoBehaviour
+public class UIManagerOld : MonoBehaviour
 {
     #region Instance
     // - - -
-        private static UIManager _instance;
-        public static UIManager Instance => _instance ??= FindObjectOfType<UIManager>();
+        private static UIManagerOld _instance;
+        public static UIManagerOld Instance => _instance ??= FindObjectOfType<UIManagerOld>();
     // - - -
     #endregion
     
