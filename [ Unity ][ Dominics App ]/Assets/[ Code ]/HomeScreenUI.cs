@@ -43,16 +43,16 @@ public class HomeScreenUI : MonoBehaviour
 
     private void OnViewActiveRequestButtonPressed()
     {
-        UIManagerOld.TransitionPanels(ref _viewActiveRequestsPanel, ref _gameObject);
+        //UIManagerOld.TransitionPanels(ref _viewActiveRequestsPanel, ref _gameObject);
     }
     
     private void OnCreateRequestButtonPressed()
     {
-        UIManagerOld.TransitionPanels(ref _createRequestPanel, ref _gameObject);
+        //UIManagerOld.TransitionPanels(ref _createRequestPanel, ref _gameObject);
     }
     
     private void OnViewRequestHistoryButtonPressed()
     {
-        UIManagerOld.TransitionPanels(ref _viewRequestHistoryPanel, ref _gameObject);
+        //UIManagerOld.TransitionPanels(ref _viewRequestHistoryPanel, ref _gameObject);
     }
 }

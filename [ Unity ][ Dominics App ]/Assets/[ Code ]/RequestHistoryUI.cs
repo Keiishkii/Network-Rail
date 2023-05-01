@@ -34,6 +34,6 @@ public class RequestHistoryUI : MonoBehaviour
 
     private void OnReturnButtonPressed()
     {
-        UIManagerOld.TransitionPanels(ref _homeScreenPanel, ref _gameObject);
+        //UIManagerOld.TransitionPanels(ref _homeScreenPanel, ref _gameObject);
     }
 }

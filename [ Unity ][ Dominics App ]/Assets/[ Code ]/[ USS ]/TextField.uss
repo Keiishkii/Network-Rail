@@ -1,0 +1,37 @@
+.TextField {
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    color: rgba(0, 0, 0, 255);
+    -unity-background-image-tint-color: rgb(190, 223, 241);
+    background-color: rgba(255, 255, 255, 0);
+}
+
+.TextField > .unity-text-field__label {
+    width: auto;
+    max-width: none;
+    min-width: 30%;
+    color: rgb(0, 0, 0);
+    font-size: 55px;
+}
+
+.TextField > .unity-text-field__input {
+    max-width: none;
+    min-width: auto;
+    white-space: nowrap;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 55px;
+    padding-top: 2.5px;
+    padding-bottom: 2.5px;
+    background-color: rgb(190, 223, 241);
+    border-left-color: rgba(96, 140, 144, 255);
+    border-right-color: rgba(96, 140, 144, 255);
+    border-top-color: rgba(96, 140, 144, 255);
+    border-bottom-color: rgba(96, 140, 144, 255);
+    border-left-width: 2px;
+    border-right-width: 2px;
+    border-top-width: 2px;
+    border-bottom-width: 2px;
+}
