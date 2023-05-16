@@ -1,9 +1,10 @@
-.Title {
-    font-size: 100px;
-    color: rgba(90, 90, 90, 255);
+.unity-label {
+    font-size: 60px;
+    color: rgb(89, 89, 89);
 }
 
-.Text {
-    font-size: 80px;
-    color: rgba(89, 89, 89, 255);
+.Title {
+    font-size: 100px;
+    color: rgb(90, 90, 90);
+    -unity-font-style: bold;
 }

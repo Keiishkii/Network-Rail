@@ -1,0 +1,24 @@
+.NavigationDropdownButton {
+    -unity-text-outline-color: rgb(255, 255, 255);
+}
+
+.NavigationDropdownButton:hover {
+    background-color: rgb(241, 241, 241);
+}
+
+.NavigationWaffleButton {
+    background-color: rgba(0, 0, 0, 0);
+    border-left-color: rgb(171, 199, 214);
+    border-right-color: rgb(171, 199, 214);
+    border-top-color: rgb(171, 199, 214);
+    border-bottom-color: rgb(171, 199, 214);
+}
+
+.NavigationWaffleButton:hover {
+    border-left-color: rgb(159, 186, 200);
+    border-right-color: rgb(159, 186, 200);
+    border-top-color: rgb(159, 186, 200);
+    border-bottom-color: rgb(159, 186, 200);
+    -unity-background-image-tint-color: rgb(0, 0, 0);
+    background-color: rgb(255, 0, 0);
+}

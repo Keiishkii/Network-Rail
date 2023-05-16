@@ -1,0 +1,63 @@
+.unity-group-box {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.unity-base-dropdown__item > .unity-base-dropdown__label {
+    font-size: 48px;
+    -unity-font-style: normal;
+}
+
+.unity-button {
+    border-left-color: rgb(208, 223, 236);
+    border-right-color: rgb(208, 223, 236);
+    border-top-color: rgb(208, 223, 236);
+    border-bottom-color: rgb(208, 223, 236);
+    background-color: rgb(113, 165, 192);
+    -unity-font-style: bold;
+    font-size: 60px;
+    -unity-text-align: middle-center;
+    white-space: nowrap;
+    overflow: hidden;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-top-width: 10px;
+    border-bottom-width: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: rgb(255, 255, 255);
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.unity-button:hover {
+    border-left-color: rgb(163, 186, 207);
+    border-right-color: rgb(163, 186, 207);
+    border-top-color: rgb(163, 186, 207);
+    border-bottom-color: rgb(163, 186, 207);
+    background-color: rgb(102, 152, 178);
+    -unity-font-style: bold;
+    font-size: 60px;
+    -unity-text-align: middle-center;
+    white-space: nowrap;
+    overflow: hidden;
+    border-left-width: 10px;
+    border-right-width: 10px;
+    border-top-width: 10px;
+    border-bottom-width: 10px;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    color: rgb(255, 255, 255);
+}
