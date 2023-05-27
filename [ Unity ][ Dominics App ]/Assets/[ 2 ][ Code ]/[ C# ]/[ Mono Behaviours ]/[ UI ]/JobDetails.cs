@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class JobDetails : MonoBehaviour
+public class JobDetails : _UILayoutInterface
 {
     // Start is called before the first frame update
     void Start()

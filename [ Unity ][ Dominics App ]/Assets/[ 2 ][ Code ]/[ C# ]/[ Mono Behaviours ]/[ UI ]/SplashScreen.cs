@@ -1,18 +1,22 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class SplashScreen : MonoBehaviour
+public class SplashScreen : _UILayoutInterface
 {
     #region [ Document References ]
     // - - -
         private UIDocument _document;
-        
         private VisualElement _root;
-        private VisualElement _splashScreen;
-        private VisualElement _userLogin;
+        
+        private VisualElement _splashScreenLayout;
+        private VisualElement _userLoginLayout;
+    // - - -
+    #endregion
+
+    #region [ References ]
+    // - - -
+        private UserLogin _userLogin;
     // - - -
     #endregion
 
@@ -25,8 +29,10 @@ public class SplashScreen : MonoBehaviour
         _document = FindObjectOfType<UIDocument>();
         _root = _document.rootVisualElement;
 
-        _splashScreen = _root.Q<VisualElement>("SplashScreen");
-        _userLogin = _root.Q<VisualElement>("UserLogin");
+        _splashScreenLayout = _root.Q<VisualElement>("_SplashScreenLayout");
+        _userLoginLayout    = _root.Q<VisualElement>("_UserLoginLayout");
+
+        _userLogin = FindObjectOfType<UserLogin>();
     }
 
     private void Start() => StartCoroutine(Startup());
@@ -35,10 +41,11 @@ public class SplashScreen : MonoBehaviour
     
     private IEnumerator Startup()
     {
-        UIManager.FadeIn(_splashScreen, 2f);
+        UIManager.FadeIn(_splashScreenLayout, 2f);
         
         yield return new WaitForSeconds(4f);
+        _userLogin.ResetUIDefaults();
         
-        UIManager.FadeTransition(_splashScreen, _userLogin, true);
+        UIManager.FadeTransition(_splashScreenLayout, _userLoginLayout, true);
     }
 }

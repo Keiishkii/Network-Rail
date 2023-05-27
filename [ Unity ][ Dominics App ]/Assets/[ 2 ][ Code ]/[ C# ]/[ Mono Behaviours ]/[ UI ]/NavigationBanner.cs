@@ -5,30 +5,35 @@ using NetworkRail.SQL;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class NavigationBanner : MonoBehaviour
+public class NavigationBanner : _UILayoutInterface
 {
 	#region Document References
 	// - - -
 		private UIDocument _document;
 		private VisualElement _root;
 
-		private VisualElement _navigationBanner;
-		private VisualElement _dropdownList;
-		private VisualElement _userLogin;
-		private VisualElement _userPortal;
-
-		private UserLogin _userLoginScript;
-		private UserPortal _userPortalScript;
-	// - - -
-	#endregion
-
-	#region References
-	// - - -
+		private VisualElement _navigationBannerLayout;
+		private VisualElement _userLoginLayout;
+		private VisualElement _userPortalLayout;
+		private VisualElement _userDetailsLayout;
+		
+		
+		private VisualElement _dropdownLayout;
+		private VisualElement _bannerLayout;
+	
 		private Button _navigationDropdownButton;
 		
 		private Button _userPortalButton;
 		private Button _manageUserDataButton;
 		private Button _logoutButton;
+	// - - -
+	#endregion
+
+	#region References
+	// - - -
+		private UserLogin _userLogin;
+		private UserPortal _userPortal;
+		private UserDetails _userDetails;
 	// - - -
 	#endregion
 	
@@ -39,25 +44,28 @@ public class NavigationBanner : MonoBehaviour
 	private void Awake()
 	{
 		_document = FindObjectOfType<UIDocument>();
-		
-		_userLoginScript = FindObjectOfType<UserLogin>();
-		_userPortalScript = FindObjectOfType<UserPortal>();
-		
-		
 		_root = _document.rootVisualElement;
-
-		_navigationBanner = _root.Q<VisualElement>("NavigationBanner");
-		_dropdownList = _root.Q<VisualElement>("Dropdown");
-		_userLogin = _root.Q<VisualElement>("UserLogin");
-		_userPortal = _root.Q<VisualElement>("UserPortal");
 		
-		_navigationDropdownButton = _navigationBanner.Q<Button>("NavigationBannerDropdownButton");
+		_userLogin = FindObjectOfType<UserLogin>();
+		_userPortal = FindObjectOfType<UserPortal>();
+		_userDetails = FindObjectOfType<UserDetails>();
 		
-		_userPortalButton = _navigationBanner.Q<Button>("UserPortalButton");
-		_manageUserDataButton = _navigationBanner.Q<Button>("ManageUserDetailsButton");
-		_logoutButton = _navigationBanner.Q<Button>("LogoutButton");
 		
-		UIManager.Disable(_dropdownList);
+		_navigationBannerLayout = _root.Q<VisualElement>("_NavigationBannerLayout");
+		_userLoginLayout		= _root.Q<VisualElement>("_UserLoginLayout");
+		_userPortalLayout		= _root.Q<VisualElement>("_UserPortalLayout");
+		_userDetailsLayout		= _root.Q<VisualElement>("_UserDetailsLayout");
+		
+		_bannerLayout	= _navigationBannerLayout.Q<VisualElement>("BannerLayout");
+		_dropdownLayout = _navigationBannerLayout.Q<VisualElement>("DropdownLayout");
+		
+		_navigationDropdownButton = _navigationBannerLayout.Q<Button>("NavigationBannerDropdownButton");
+		
+		_userPortalButton		= _dropdownLayout.Q<Button>("UserPortalButton");
+		_manageUserDataButton	= _dropdownLayout.Q<Button>("ManageUserDetailsButton");
+		_logoutButton			= _dropdownLayout.Q<Button>("LogoutButton");
+		
+		UIManager.Disable(_dropdownLayout);
 	}
 
 	private void OnEnable()
@@ -79,13 +87,13 @@ public class NavigationBanner : MonoBehaviour
 	}
 
 
-
+	
 	private void OnNavigationDropdownButtonPressed(ClickEvent clickEvent)
 	{
-		switch (_dropdownList.style.display.value)
+		switch (_dropdownLayout.style.display.value)
 		{
-			case DisplayStyle.Flex: UIManager.Disable(_dropdownList); break;
-			case DisplayStyle.None: UIManager.Enable(_dropdownList); break;
+			case DisplayStyle.Flex: UIManager.Disable(_dropdownLayout); break;
+			case DisplayStyle.None: UIManager.Enable(_dropdownLayout); break;
 		}
 	}
 	
@@ -93,25 +101,28 @@ public class NavigationBanner : MonoBehaviour
 	
 	private void OnUserPortalButtonPressed(ClickEvent clickEvent)
 	{
-		UIManager.Swap(UIManager.ActiveUIPanel, _userPortal, true);
-		UIManager.Disable(_dropdownList);
+		UIManager.Swap(UIManager.ActiveUIPanel, _userPortalLayout, true);
+		UIManager.Disable(_dropdownLayout);
 		
-		_userPortalScript.SetUIDefaults();
+		_userPortal.ResetUIDefaults();
 	}
 	
 	private void OnManageUserButtonPressed(ClickEvent clickEvent)
 	{
-		UIManager.Disable(_dropdownList);
+		UIManager.Swap(UIManager.ActiveUIPanel, _userDetailsLayout, true);
+		UIManager.Disable(_dropdownLayout);
+		
+		_userDetails.ResetUIDefaults();
 	}
 	
 	private void OnLogoutButtonPressed(ClickEvent clickEvent)
 	{
-		SQLManager.QueryLogout(UserData.Department, UserData.Username);
+		Query.LogoutUserLogin(UserData.Department, UserData.Username);
 		
-		UIManager.FadeTransition(UIManager.ActiveUIPanel, _userLogin, true);
-		UIManager.FadeOut(_navigationBanner);
-		UIManager.Disable(_dropdownList);
+		UIManager.FadeTransition(UIManager.ActiveUIPanel, _userLoginLayout, true);
+		UIManager.FadeOut(_navigationBannerLayout);
+		UIManager.Disable(_dropdownLayout);
 		
-		_userLoginScript.SetUIDefaults();
+		_userLogin.ResetUIDefaults();
 	}
 }

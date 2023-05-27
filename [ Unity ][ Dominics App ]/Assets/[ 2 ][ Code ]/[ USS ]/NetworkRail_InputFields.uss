@@ -12,13 +12,15 @@
 }
 
 .unity-text-field > .unity-text-field__label {
-    width: 30%;
+    width: 35%;
     max-width: none;
     min-width: 30%;
-    color: rgb(0, 0, 0);
-    font-size: 55px;
+    color: rgb(89, 89, 89);
+    font-size: 50px;
     white-space: nowrap;
     overflow: hidden;
+    -unity-text-outline-color: rgba(89, 89, 89, 0);
+    text-overflow: ellipsis;
 }
 
 .unity-text-field > .unity-text-field__input {
@@ -28,10 +30,10 @@
     justify-content: center;
     padding-left: 20px;
     padding-right: 20px;
-    font-size: 55px;
+    font-size: 50px;
     padding-top: 2.5px;
     padding-bottom: 2.5px;
-    background-color: rgb(190, 223, 241);
+    background-color: rgb(223, 244, 255);
     border-left-color: rgb(96, 140, 144);
     border-right-color: rgb(96, 140, 144);
     border-top-color: rgb(96, 140, 144);
@@ -40,6 +42,7 @@
     border-right-width: 2px;
     border-top-width: 2px;
     border-bottom-width: 2px;
+    color: rgb(89, 89, 89);
 }
 
 .unity-text-field > .unity-text-field__input:hover {
@@ -56,12 +59,14 @@
 
 .unity-popup-field > .unity-popup-field__label {
     min-width: 30%;
-    color: rgb(0, 0, 0);
-    font-size: 55px;
+    color: rgb(89, 89, 89);
+    font-size: 50px;
     white-space: nowrap;
     overflow: hidden;
     flex-direction: column;
-    width: 30%;
+    width: 35%;
+    -unity-font-style: normal;
+    text-overflow: ellipsis;
 }
 
 .unity-popup-field > .unity-popup-field__input {
@@ -69,10 +74,10 @@
     justify-content: center;
     align-items: stretch;
     padding-right: 20px;
-    font-size: 55px;
+    font-size: 50px;
     padding-top: 2.5px;
     padding-bottom: 2.5px;
-    background-color: rgb(190, 223, 241);
+    background-color: rgb(223, 244, 255);
     border-left-color: rgb(96, 140, 144);
     border-right-color: rgb(96, 140, 144);
     border-top-color: rgb(96, 140, 144);
@@ -81,8 +86,35 @@
     border-right-width: 2px;
     border-top-width: 2px;
     border-bottom-width: 2px;
+    color: rgb(89, 89, 89);
 }
 
 .unity-popup-field > .unity-popup-field__input:hover {
     background-color: rgb(177, 200, 212);
+}
+
+.untiy-toggle {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    width: 100%;
+}
+
+.unity-toggle > .unity-toggle__label {
+    width: 80%;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.unity-toggle > .unity-toggle__input {
+    position: absolute;
+    right: 0;
+    top: 0;
+    scale: 1.5 1.5;
+    translate: -100% 0;
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100%;
 }

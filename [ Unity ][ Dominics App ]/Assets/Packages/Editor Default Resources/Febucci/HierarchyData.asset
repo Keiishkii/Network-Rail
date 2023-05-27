@@ -23,7 +23,6 @@ MonoBehaviour:
       targetClasses:
       - {fileID: 11500000, guid: b57ff0ecd89bfba4d907a2ccc578345a, type: 3}
       - {fileID: 11500000, guid: 9979c432c9c8d9a42bf325dda68ffa49, type: 3}
-      - {fileID: 11500000, guid: d6969a4ce82dd324f912fe280a5c25a5, type: 3}
       - {fileID: 11500000, guid: 6e12dbe0f259c914dbb48a65c4a2a5b7, type: 3}
       - {fileID: 11500000, guid: 0e8261642058684438ce0c1ba490f2f0, type: 3}
       - {fileID: 11500000, guid: 22e5f1ca6f4d19e498f27fb5dae2c941, type: 3}
@@ -38,6 +37,7 @@ MonoBehaviour:
       - {fileID: 11500000, guid: 4ae6fdabe8521ee42a6c026e88efc5d4, type: 3}
       - {fileID: 11500000, guid: 3f1c5132fc87b61468a407c76ed75f69, type: 3}
       - {fileID: 11500000, guid: 2345c86d6281e2a4a8b56354e3be00b4, type: 3}
+      - {fileID: 11500000, guid: d6969a4ce82dd324f912fe280a5c25a5, type: 3}
   prefabsData:
     enabled: 0
     prefabs: []

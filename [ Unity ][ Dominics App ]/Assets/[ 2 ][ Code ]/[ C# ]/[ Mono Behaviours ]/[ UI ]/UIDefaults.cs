@@ -11,22 +11,22 @@ public class UIDefaults : MonoBehaviour
         private UIDocument _document;
         private VisualElement _root;
 
-        private VisualElement _notification;
-        private VisualElement _navigationBanner;
+        private VisualElement _notificationLayout;
+        private VisualElement _navigationBannerLayout;
         
-        private VisualElement _splashScreen;
-        private VisualElement _userLogin;
-        private VisualElement _userPortal;
-        private VisualElement _manageUsers;
-        private VisualElement _createUser;
-        private VisualElement _userDetails;
-        private VisualElement _manageJobs;
-        private VisualElement _jobDetails;
-        private VisualElement _jobSkillDetails;
-        private VisualElement _createJob;
-        private VisualElement _userSkills;
-        private VisualElement _userShifts;
-        private VisualElement _jobSkillsToUsers;
+        private VisualElement _splashScreenLayout;
+        private VisualElement _userLoginLayout;
+        private VisualElement _userPortalLayout;
+        private VisualElement _manageUsersLayout;
+        private VisualElement _createUserLayout;
+        private VisualElement _userDetailsLayout;
+        private VisualElement _manageJobsLayout;
+        private VisualElement _jobDetailsLayout;
+        private VisualElement _jobSkillDetailsLayout;
+        private VisualElement _createJobLayout;
+        private VisualElement _userSkillsLayout;
+        private VisualElement _userShiftsLayout;
+        private VisualElement _jobSkillsToUsersLayout;
     // - - -
     #endregion
     
@@ -38,46 +38,45 @@ public class UIDefaults : MonoBehaviour
     {
         _document = FindObjectOfType<UIDocument>();
         _root = _document.rootVisualElement;
-        //_root.styleSheets.Add(_defaultTextStyleSheet);
 
-        _notification = _root.Q<VisualElement>("Notification");
-        _navigationBanner = _root.Q<VisualElement>("NavigationBanner");
+        _notificationLayout     = _root.Q<VisualElement>("_NotificationLayout");
+        _navigationBannerLayout = _root.Q<VisualElement>("_NavigationBannerLayout");
         
-        _splashScreen = _root.Q<VisualElement>("SplashScreen");
-        _userLogin = _root.Q<VisualElement>("UserLogin");
-        _userPortal = _root.Q<VisualElement>("UserPortal");
-        _manageUsers = _root.Q<VisualElement>("ManageUsers");
-        _createUser = _root.Q<VisualElement>("CreateUser");
-        _userDetails = _root.Q<VisualElement>("UserDetails");
-        _manageJobs = _root.Q<VisualElement>("ManageJobs");
-        _jobDetails = _root.Q<VisualElement>("JobDetails");
-        _jobSkillDetails = _root.Q<VisualElement>("JobSkillDetails");
-        _createJob = _root.Q<VisualElement>("CreateJob");
-        _userSkills = _root.Q<VisualElement>("UserSkills");
-        _userShifts = _root.Q<VisualElement>("UserShifts");
-        _jobSkillsToUsers = _root.Q<VisualElement>("JobSkillsToUsers");
+        _splashScreenLayout     = _root.Q<VisualElement>("_SplashScreenLayout");
+        _userLoginLayout        = _root.Q<VisualElement>("_UserLoginLayout");
+        _userPortalLayout       = _root.Q<VisualElement>("_UserPortalLayout");
+        _manageUsersLayout      = _root.Q<VisualElement>("_ManageUsersLayout");
+        _createUserLayout       = _root.Q<VisualElement>("_CreateUserLayout");
+        _userDetailsLayout      = _root.Q<VisualElement>("_UserDetailsLayout");
+        _manageJobsLayout       = _root.Q<VisualElement>("_ManageJobsLayout");
+        _jobDetailsLayout       = _root.Q<VisualElement>("_JobDetailsLayout");
+        _jobSkillDetailsLayout  = _root.Q<VisualElement>("_JobSkillDetailsLayout");
+        _createJobLayout        = _root.Q<VisualElement>("_CreateJobLayout");
+        _userSkillsLayout       = _root.Q<VisualElement>("_UserSkillsLayout");
+        _userShiftsLayout       = _root.Q<VisualElement>("_UserShiftsLayout");
+        _jobSkillsToUsersLayout = _root.Q<VisualElement>("_JobSkillsToUsersLayout");
     }
 
     private void Start()
     {
         Screen.SetResolution(Display.main.renderingWidth, Display.main.renderingHeight, true);
     
-        UIManager.Enable(_splashScreen, true);
+        UIManager.Enable(_splashScreenLayout, true);
         
-        UIManager.Disable(_notification);
-        UIManager.Disable(_navigationBanner);
+        UIManager.Disable(_notificationLayout);
+        UIManager.Disable(_navigationBannerLayout);
      
-        UIManager.Disable(_userLogin);
-        UIManager.Disable(_userPortal);
-        UIManager.Disable(_manageUsers);
-        UIManager.Disable(_createUser);
-        UIManager.Disable(_userDetails);
-        UIManager.Disable(_manageJobs);
-        UIManager.Disable(_jobDetails);
-        UIManager.Disable(_jobSkillDetails);
-        UIManager.Disable(_createJob);
-        UIManager.Disable(_userSkills);
-        UIManager.Disable(_userShifts);
-        UIManager.Disable(_jobSkillsToUsers);
+        UIManager.Disable(_userLoginLayout);
+        UIManager.Disable(_userPortalLayout);
+        UIManager.Disable(_manageUsersLayout);
+        UIManager.Disable(_createUserLayout);
+        UIManager.Disable(_userDetailsLayout);
+        UIManager.Disable(_manageJobsLayout);
+        UIManager.Disable(_jobDetailsLayout);
+        UIManager.Disable(_jobSkillDetailsLayout);
+        UIManager.Disable(_createJobLayout);
+        UIManager.Disable(_userSkillsLayout);
+        UIManager.Disable(_userShiftsLayout);
+        UIManager.Disable(_jobSkillsToUsersLayout);
     }
 }

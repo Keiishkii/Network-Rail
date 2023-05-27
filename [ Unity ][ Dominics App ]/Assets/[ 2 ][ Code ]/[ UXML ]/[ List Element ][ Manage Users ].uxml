@@ -1,0 +1,17 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/[%202%20][%20Code%20]/[%20USS%20]/NetworkRail_Buttons.uss?fileID=7433441132597879392&amp;guid=12882201071cf3b4982796cb469884a7&amp;type=3#NetworkRail_Buttons" />
+    <ui:GroupBox name="ListElement" style="align-items: stretch; flex-direction: row; background-color: rgb(255, 255, 255);">
+        <ui:GroupBox name="ColomnOne" style="justify-content: center; width: 60%;">
+            <ui:Label tabindex="-1" text="Name" display-tooltip-when-elided="true" name="FullName" style="text-overflow: ellipsis; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 20px; padding-right: 4px; padding-top: 4px; padding-bottom: 4px;" />
+        </ui:GroupBox>
+        <ui:GroupBox name="ColumnTwo" style="justify-content: center; align-items: center; width: 20%;">
+            <ui:GroupBox name="Shadow" style="width: 20px; height: 100%; background-image: url(&apos;project://database/Assets/[%203%20][%20Assets%20]/[%20Textures%20]/[%20UI%20]/[%20Shadows%20]/Horizontal%20Shadow.png?fileID=2800000&amp;guid=af371d13741e03a4cb93ac4183c298a0&amp;type=3#Horizontal Shadow&apos;); position: absolute; top: 0; color: rgba(27, 27, 27, 0.39); -unity-background-image-tint-color: rgba(255, 255, 255, 0.2); rotate: 180deg; left: 0;" />
+            <ui:Toggle name="PTSPermissionToggle" style="scale: 1.5 1.5;" />
+        </ui:GroupBox>
+        <ui:GroupBox name="ColomnThree" style="justify-content: center; align-items: center; width: 20%;">
+            <ui:GroupBox name="Shadow" style="width: 20px; height: 100%; background-image: url(&apos;project://database/Assets/[%203%20][%20Assets%20]/[%20Textures%20]/[%20UI%20]/[%20Shadows%20]/Horizontal%20Shadow.png?fileID=2800000&amp;guid=af371d13741e03a4cb93ac4183c298a0&amp;type=3#Horizontal Shadow&apos;); position: absolute; top: 0; color: rgba(27, 27, 27, 0.39); -unity-background-image-tint-color: rgba(255, 255, 255, 0.2); rotate: 180deg; left: 0;" />
+            <ui:Toggle name="ManagementPermissionToggle" style="scale: 1.5 1.5;" />
+        </ui:GroupBox>
+        <ui:GroupBox name="Shadow" style="width: 100%; height: 20px; background-image: url(&apos;project://database/Assets/[%203%20][%20Assets%20]/[%20Textures%20]/[%20UI%20]/[%20Shadows%20]/Vertical%20Shadow.png?fileID=2800000&amp;guid=12fb6ac8346e1074bad566a39cba80c8&amp;type=3#Vertical Shadow&apos;); position: absolute; top: 100%; color: rgba(27, 27, 27, 0.39); -unity-background-image-tint-color: rgba(255, 255, 255, 0.2);" />
+    </ui:GroupBox>
+</ui:UXML>

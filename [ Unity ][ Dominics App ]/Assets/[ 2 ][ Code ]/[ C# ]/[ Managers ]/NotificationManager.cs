@@ -18,7 +18,7 @@ public class NotificationManager : MonoBehaviour
         private UIDocument _document;
         
         private VisualElement _root;
-        private VisualElement _notification;
+        private VisualElement _notificationLayout;
     // - - -
     #endregion
 
@@ -40,11 +40,11 @@ public class NotificationManager : MonoBehaviour
         _document = FindObjectOfType<UIDocument>();
         _root = _document.rootVisualElement;
 
-        _notification = _root.Q<VisualElement>("Notification");
+        _notificationLayout = _root.Q<VisualElement>("_NotificationLayout");
 		
-        _closeButton = _notification.Q<Button>("CloseButton");
-        _notificationTitle = _notification.Q<Label>("NotificationTitle");
-        _notificationText = _notification.Q<Label>("NotificationText");
+        _closeButton        = _notificationLayout.Q<Button>("CloseButton");
+        _notificationTitle  = _notificationLayout.Q<Label>("NotificationTitle");
+        _notificationText   = _notificationLayout.Q<Label>("NotificationText");
     }
 
     private void OnEnable()
@@ -61,7 +61,7 @@ public class NotificationManager : MonoBehaviour
     
     public void ShowNotification(string title, string text)
     {
-        UIManager.Enable(_notification);
+        UIManager.Enable(_notificationLayout);
         
         _notificationTitle.text = title;
         _notificationText.text = text;
@@ -69,6 +69,6 @@ public class NotificationManager : MonoBehaviour
 
     private void OnNotificationCloseButtonPressed(ClickEvent clickEvent)
     {
-        UIManager.Disable(_notification);
+        UIManager.Disable(_notificationLayout);
     }
 }

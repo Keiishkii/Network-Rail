@@ -5,16 +5,16 @@
     <Style src="project://database/Assets/[%202%20][%20Code%20]/[%20USS%20]/NetworkRail_Defaults.uss?fileID=7433441132597879392&amp;guid=41a76319372853e4daf18650e46a61f7&amp;type=3#NetworkRail_Defaults" />
     <ui:GroupBox name="Screen" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; position: relative; width: 100%; height: 100%; display: flex; min-width: auto;">
         <ui:GroupBox name="Background" style="width: 100%; height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; position: absolute; display: flex; background-color: rgb(255, 255, 255);" />
-        <ui:GroupBox name="Screens" style="width: 100%; height: 100%; position: absolute; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; display: flex;">
-            <ui:GroupBox name="SplashScreen" style="width: 100%; height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; position: absolute; display: none;">
+        <ui:GroupBox name="PanelLayouts" style="width: 100%; height: 100%; position: absolute; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; display: flex;">
+            <ui:GroupBox name="_SplashScreenLayout" style="width: 100%; height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; position: absolute; display: none;">
                 <ui:GroupBox name="Background" style="width: 100%; height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; position: absolute; align-items: center; justify-content: center;">
                     <ui:VisualElement name="Background" style="background-image: url(&apos;project://database/Assets/[%203%20][%20Assets%20]/[%20Textures%20]/[%20UI%20]/[%20Backgrounds%20]/Cropped-Background.png?fileID=2800000&amp;guid=8d70f8ba4203c9742b4a138baad8d0b9&amp;type=3#Cropped-Background&apos;); width: 100%; height: 100%; position: relative; left: 0; top: 0; right: 0; bottom: 0;" />
                 </ui:GroupBox>
                 <ui:VisualElement name="Icon" style="justify-content: center; align-items: center; flex-direction: column; width: 100%; min-height: auto; max-height: none; height: 100%; display: flex; position: relative;">
-                    <ui:VisualElement name="Banner_Logo" style="background-image: url(&apos;project://database/Assets/[%203%20][%20Assets%20]/[%20Textures%20]/[%20UI%20]/[%20Logos%20]/Logo.png?fileID=2800000&amp;guid=1e5a69c34e4192a488113a3ae6179ea7&amp;type=3#Logo&apos;); width: 60%; height: 60%; opacity: 1; transform-origin: center; translate: 0 0; left: 0; visibility: visible; align-items: flex-end; justify-content: center; flex-basis: auto; -unity-background-scale-mode: scale-to-fit; -unity-slice-left: 0; -unity-slice-top: 0; -unity-slice-right: 0; -unity-slice-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;" />
+                    <ui:VisualElement name="Banner_Logo" style="background-image: url(&apos;project://database/Assets/[%203%20][%20Assets%20]/[%20Textures%20]/[%20UI%20]/[%20Logos%20]/Network%20Rail%20Logo%20-%20Transparent.jpg?fileID=2800000&amp;guid=284550c6afe14d24287a1dc9725d598e&amp;type=3#Network Rail Logo - Transparent&apos;); width: 60%; height: 60%; opacity: 1; transform-origin: center; translate: 0 0; left: 0; visibility: visible; align-items: flex-end; justify-content: center; flex-basis: auto; -unity-background-scale-mode: scale-to-fit; -unity-slice-left: 0; -unity-slice-top: 0; -unity-slice-right: 0; -unity-slice-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0;" />
                 </ui:VisualElement>
             </ui:GroupBox>
-            <ui:GroupBox name="UserLogin" style="width: 100%; height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; position: absolute; justify-content: center; align-items: center; display: none;">
+            <ui:GroupBox name="_UserLoginLayout" style="width: 100%; height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; position: absolute; justify-content: center; align-items: center; display: none;">
                 <ui:GroupBox name="Background" style="width: 100%; height: 100%; position: absolute; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;">
                     <ui:VisualElement name="Background" style="background-image: url(&apos;project://database/Assets/[%203%20][%20Assets%20]/[%20Textures%20]/[%20UI%20]/[%20Backgrounds%20]/Cropped-Background.png?fileID=2800000&amp;guid=8d70f8ba4203c9742b4a138baad8d0b9&amp;type=3#Cropped-Background&apos;); width: 100%; height: 100%; position: absolute; top: 0; left: 0; bottom: 0; right: 0;" />
                 </ui:GroupBox>
@@ -25,16 +25,16 @@
                     <ui:Button text="Login" display-tooltip-when-elided="true" name="LoginButton" class="Button BasicButton" style="margin-top: 20%; left: auto; right: auto; scale: 1 1; width: 60%; padding-left: 10px; padding-right: 10px; padding-top: 10px; padding-bottom: 10px; -unity-text-outline-color: rgb(255, 255, 255); margin-left: 0; margin-right: 0; margin-bottom: 0;" />
                 </SquareElement>
             </ui:GroupBox>
-            <ui:GroupBox name="UserPortal" style="width: 100%; height: 100%; position: absolute; display: none; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; justify-content: flex-start;">
+            <ui:GroupBox name="_UserPortalLayout" style="width: 100%; height: 100%; position: absolute; display: none; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; justify-content: flex-start;">
                 <ui:GroupBox name="Background" style="width: 100%; height: 100%; position: absolute; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; display: flex;">
                     <ui:VisualElement name="Background" style="background-image: url(&apos;project://database/Assets/[%203%20][%20Assets%20]/[%20Textures%20]/[%20UI%20]/[%20Backgrounds%20]/Cropped-Background.png?fileID=2800000&amp;guid=8d70f8ba4203c9742b4a138baad8d0b9&amp;type=3#Cropped-Background&apos;); width: 100%; height: 100%; position: absolute; top: 0; left: 0; right: 0; bottom: 0;" />
                 </ui:GroupBox>
                 <ui:GroupBox name="GroupBox" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; width: 100%; height: 90%; justify-content: flex-end; align-items: center; display: flex; bottom: 0; top: 10%;">
                     <ui:GroupBox name="Title" style="width: 100%; height: 10%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; justify-content: center;">
-                        <ui:Label text="User Portal:" display-tooltip-when-elided="true" name="TitleText" class="Title" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 40px;" />
+                        <ui:Label text="User Portal:" display-tooltip-when-elided="true" name="TitleText" class="Title Header" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 40px;" />
                     </ui:GroupBox>
                     <ui:GroupBox name="UserData" style="width: 100%; height: 45%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 5%;">
-                        <ui:Label text="User" display-tooltip-when-elided="true" name="UserTitle" class="Title" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-top: 50px; margin-right: 50px; margin-left: 50px; margin-bottom: 50px; -unity-font-style: bold; -unity-text-align: upper-center;" />
+                        <ui:Label text="User" display-tooltip-when-elided="true" name="UserTitle" class="Title Subheader" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-top: 50px; margin-right: 50px; margin-left: 50px; margin-bottom: 50px; -unity-font-style: bold; -unity-text-align: upper-center;" />
                         <ui:GroupBox name="UserDetailsGroup" style="align-items: center; width: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;">
                             <ui:GroupBox name="UserDetailsGroupLayout" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 2%; padding-right: 2%; padding-top: 2%; padding-bottom: 2%; width: 90%; border-left-color: rgb(171, 199, 214); border-right-color: rgb(171, 199, 214); border-top-color: rgb(171, 199, 214); border-bottom-color: rgb(171, 199, 214); border-left-width: 10px; border-right-width: 10px; border-top-width: 10px; border-bottom-width: 10px;">
                                 <ui:Label text="Department:" display-tooltip-when-elided="true" name="Department" class="Text" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-top: 1%; margin-bottom: 1%;" />
@@ -44,7 +44,7 @@
                         </ui:GroupBox>
                     </ui:GroupBox>
                     <ui:GroupBox name="Resources" style="width: 100%; height: 45%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 5%; flex-direction: column; justify-content: flex-end;">
-                        <ui:Label text="Resources" display-tooltip-when-elided="true" name="ResourcesTitle" class="Title" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-top: 50px; margin-right: 50px; margin-left: 50px; margin-bottom: 50px; -unity-font-style: bold; -unity-text-align: upper-center;" />
+                        <ui:Label text="Resources" display-tooltip-when-elided="true" name="ResourcesTitle" class="Title Subheader" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-top: 50px; margin-right: 50px; margin-left: 50px; margin-bottom: 50px; -unity-font-style: bold; -unity-text-align: upper-center;" />
                         <ui:GroupBox name="ResourceButtonGroup" style="width: 100%; height: auto; justify-content: flex-start; align-items: center; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;">
                             <ui:GroupBox name="ResourceButtonGroupLayout" style="width: 90%; align-items: center; justify-content: flex-start; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; border-left-width: 10px; border-right-width: 10px; border-top-width: 10px; border-bottom-width: 10px; border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-left-color: rgb(171, 199, 214); border-right-color: rgb(171, 199, 214); border-top-color: rgb(171, 199, 214); border-bottom-color: rgb(171, 199, 214);">
                                 <ui:GroupBox name="ResourceGroups" style="flex-direction: row; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; width: 100%;">
@@ -64,94 +64,87 @@
                     </ui:GroupBox>
                 </ui:GroupBox>
             </ui:GroupBox>
-            <ui:GroupBox name="ManageUsers" style="position: absolute; width: 100%; height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; display: none;">
+            <ui:GroupBox name="_ManageUsersLayout" style="position: absolute; width: 100%; height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; display: flex;">
                 <ui:GroupBox name="Background" style="width: 100%; height: 100%; position: absolute; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; display: flex; top: -4px; left: 0;">
                     <ui:VisualElement name="Background" style="background-image: url(&apos;project://database/Assets/[%203%20][%20Assets%20]/[%20Textures%20]/[%20UI%20]/[%20Backgrounds%20]/Cropped-Background.png?fileID=2800000&amp;guid=8d70f8ba4203c9742b4a138baad8d0b9&amp;type=3#Cropped-Background&apos;); width: 100%; height: 100%; position: absolute; top: 0; left: 0; right: 0; bottom: 0;" />
                 </ui:GroupBox>
                 <ui:GroupBox name="GroupBox" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; width: 100%; height: 90%; justify-content: flex-start; align-items: center; display: flex; left: auto; top: 10%;">
                     <ui:GroupBox name="Title" style="width: 100%; height: 10%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; justify-content: center;">
-                        <ui:Label text="Manage Users:" display-tooltip-when-elided="true" name="TitleText" class="Title" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 40px;" />
+                        <ui:Label text="Manage Users:" display-tooltip-when-elided="true" name="TitleText" class="Title Header" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 40px;" />
                     </ui:GroupBox>
                     <ui:GroupBox name="UserListLayoutContainer" style="width: 100%; height: 75%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; justify-content: center; align-items: center;">
                         <ui:GroupBox name="TitleBar" style="flex-direction: row; width: 90%; height: 5%;">
-                            <ui:GroupBox name="_" style="width: 5%;" />
-                            <ui:GroupBox name="Titles" style="width: 95%; flex-direction: row;">
+                            <ui:GroupBox name="Titles" style="width: 100%; flex-direction: row; padding-left: 5%; padding-right: 5%;">
                                 <ui:Label text="User" display-tooltip-when-elided="true" name="User" class="Text" style="width: 60%; height: 100%; -unity-text-align: upper-center;" />
                                 <ui:Label text="PTS" display-tooltip-when-elided="true" name="PTS" class="Text" style="width: 20%; height: 100%; -unity-text-align: upper-center;" />
-                                <ui:Label text="JC" display-tooltip-when-elided="true" name="JC" class="Text" style="width: 20%; height: 100%; -unity-text-align: upper-center;" />
+                                <ui:Label text="Manager" display-tooltip-when-elided="true" name="JC" class="Text" style="width: 20%; height: 100%; -unity-text-align: upper-center;" />
                             </ui:GroupBox>
                         </ui:GroupBox>
-                        <ui:GroupBox name="Contents" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; width: 90%; height: 85%; background-color: rgba(0, 0, 0, 0.11); border-left-width: 10px; border-right-width: 10px; border-top-width: 10px; border-bottom-width: 10px; border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-left-color: rgb(113, 165, 192); border-right-color: rgb(113, 165, 192); border-top-color: rgb(113, 165, 192); border-bottom-color: rgb(113, 165, 192);">
-                            <ui:Scroller high-value="100" direction="Vertical" value="42" style="height: 100%; width: 5%; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+                        <ui:GroupBox name="ContentsLayout" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; width: 90%; height: 85%; background-color: rgba(0, 0, 0, 0.11); border-left-width: 10px; border-right-width: 10px; border-top-width: 10px; border-bottom-width: 10px; border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-left-color: rgb(113, 165, 192); border-right-color: rgb(113, 165, 192); border-top-color: rgb(113, 165, 192); border-bottom-color: rgb(113, 165, 192); flex-direction: column;">
+                            <ui:GroupBox name="Contents" style="height: auto; width: 100%; flex-direction: column-reverse;" />
                         </ui:GroupBox>
                     </ui:GroupBox>
                     <ui:GroupBox name="ButtonList" style="flex-direction: row; width: 100%; height: 15%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; justify-content: center; align-items: center;">
                         <ui:GroupBox name="Left" style="width: 50%; height: 100%; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; justify-content: center; align-items: center;">
-                            <ui:Button text="Refresh" display-tooltip-when-elided="true" name="Refresh" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; flex-basis: auto; overflow: hidden; padding-right: 20px; padding-left: 20px; -unity-font: initial; padding-top: 20px; padding-bottom: 20px; width: 80%;" />
+                            <ui:Button text="Create User" display-tooltip-when-elided="true" name="CreateUserButton" class="BasicButton" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 10%; padding-right: 10%; width: 80%;" />
                         </ui:GroupBox>
                         <ui:GroupBox name="Right" style="width: 50%; height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; justify-content: center; align-items: center;">
-                            <ui:Button text="Create User" display-tooltip-when-elided="true" name="CreateUser" class="BasicButton" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 10%; padding-right: 10%; width: 80%;" />
+                            <ui:Button text="Apply" display-tooltip-when-elided="true" name="ApplyChangesButton" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; flex-basis: auto; overflow: hidden; padding-right: 20px; padding-left: 20px; -unity-font: initial; padding-top: 20px; padding-bottom: 20px; width: 80%;" />
                         </ui:GroupBox>
                     </ui:GroupBox>
                 </ui:GroupBox>
             </ui:GroupBox>
-            <ui:GroupBox name="CreateUser" style="position: absolute; width: 100%; height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; display: none;">
+            <ui:GroupBox name="_CreateUserLayout" style="position: absolute; width: 100%; height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; display: flex;">
                 <ui:GroupBox name="Background" style="width: 100%; height: 100%; position: absolute; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; display: flex;">
                     <ui:VisualElement name="Background" style="background-image: url(&apos;project://database/Assets/[%203%20][%20Assets%20]/[%20Textures%20]/[%20UI%20]/[%20Backgrounds%20]/Cropped-Background.png?fileID=2800000&amp;guid=8d70f8ba4203c9742b4a138baad8d0b9&amp;type=3#Cropped-Background&apos;); width: 100%; height: 100%; position: absolute; top: 0; left: 0; right: 0; bottom: 0;" />
                 </ui:GroupBox>
                 <ui:GroupBox name="GroupBox" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; width: 100%; height: 90%; justify-content: flex-start; align-items: center; display: flex; top: 10%;">
                     <ui:GroupBox name="Title" style="width: 100%; height: 10%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; justify-content: center;">
-                        <ui:Label text="Create User:" display-tooltip-when-elided="true" name="TitleText" class="Title" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 40px;" />
+                        <ui:Label text="Create User:" display-tooltip-when-elided="true" name="TitleText" class="Title Header" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 40px;" />
                     </ui:GroupBox>
                     <ui:GroupBox name="InputFields" style="width: 100%; height: 75%; align-items: center;">
                         <ui:GroupBox name="InputFieldLayout" style="width: 80%; height: 100%;">
-                            <ui:TextField picking-mode="Ignore" label="Username" value="filler text" text="filler text" name="UsernameField" style="margin-left: 0; margin-right: 0; margin-top: 2%; margin-bottom: 2%;" />
-                            <ui:TextField picking-mode="Ignore" label="Password" value="filler text" text="filler text" name="PasswordField" style="margin-top: 2%; margin-bottom: 2%; margin-right: 0; margin-left: 0;" />
-                            <ui:DropdownField label="PTS Holder" index="-1" choices="System.Collections.Generic.List`1[System.String]" name="PTSHolderField" style="margin-left: 0; margin-right: 0; margin-top: 2%; margin-bottom: 2%;" />
-                            <ui:DropdownField label="Job Controller" index="-1" choices="System.Collections.Generic.List`1[System.String]" name="JobControllerField" style="margin-left: 0; margin-right: 0; margin-top: 2%; margin-bottom: 2%;" />
+                            <ui:TextField picking-mode="Ignore" label="Username" value="filler text" text="filler text" name="UsernameTextField" style="margin-left: 0; margin-right: 0; margin-top: 2%; margin-bottom: 2%;" />
+                            <ui:TextField picking-mode="Ignore" label="Password" value="filler text" text="filler text" name="PasswordTextField" style="margin-top: 2%; margin-bottom: 2%; margin-right: 0; margin-left: 0;" />
+                            <ui:Toggle label="PTS Permission" name="PTSPermissionToggle" style="width: 100%; margin-left: 0; margin-right: 0; margin-top: 2%; margin-bottom: 2%;" />
+                            <ui:Toggle label="Management Permission" name="ManagementPermissionToggle" style="width: 100%; margin-left: 0; margin-right: 0; margin-top: 2%; margin-bottom: 2%;" />
                         </ui:GroupBox>
                     </ui:GroupBox>
                     <ui:GroupBox name="ButtonList" style="flex-direction: row; width: 100%; height: 15%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; align-items: auto; justify-content: center;">
                         <ui:GroupBox name="Left" style="height: 100%; width: 50%; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; justify-content: center; align-items: center;">
-                            <ui:Button text="Return" display-tooltip-when-elided="true" style="width: 80%;" />
+                            <ui:Button text="Return" display-tooltip-when-elided="true" name="ReturnButton" style="width: 80%;" />
                         </ui:GroupBox>
                         <ui:GroupBox name="Right" style="width: 50%; height: 100%; justify-content: center; align-items: center;">
-                            <ui:Button text="Create User" display-tooltip-when-elided="true" style="width: 80%;" />
+                            <ui:Button text="Create User" display-tooltip-when-elided="true" name="CreateUserButton" style="width: 80%;" />
                         </ui:GroupBox>
                     </ui:GroupBox>
                 </ui:GroupBox>
-                <ui:Button display-tooltip-when-elided="true" name="UserPortalButton" style="width: 100%; height: 120px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; background-color: rgb(255, 255, 255); font-size: 40px; -unity-text-align: middle-left; color: rgb(105, 105, 106); visibility: visible; overflow: visible; align-items: center; -unity-font-style: bold; justify-content: center;">
-                    <ui:Label text="User Portal" display-tooltip-when-elided="true" name="UserPortalText" class="NavigationButton NavigationDropdownButton" style="height: 100%; width: 100%; padding-left: 40px; padding-right: 40px;" />
-                    <ui:VisualElement name="Shadow" style="background-image: url(&apos;project://database/Assets/[%203%20][%20Assets%20]/[%20Textures%20]/[%20UI%20]/[%20Shadows%20]/Vertical%20Shadow.png?fileID=2800000&amp;guid=12fb6ac8346e1074bad566a39cba80c8&amp;type=3#Vertical Shadow&apos;); width: 100%; height: 25px; position: absolute; -unity-background-image-tint-color: rgba(255, 255, 255, 0.12); margin-top: 0; top: 100%;" />
-                </ui:Button>
-                <ui:Button display-tooltip-when-elided="true" name="ManageUserDetailsButton" class="NavigationButton" style="align-items: center; width: 100%; height: 120px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; background-color: rgb(255, 255, 255); color: rgb(89, 89, 89); font-size: 40px; -unity-text-align: middle-left; overflow: visible; -unity-font-style: bold; justify-content: center;">
-                    <ui:Label text="Manage User Details" display-tooltip-when-elided="true" name="ManageUserDetailsText" class="NavigationButton NavigationDropdownButton" style="height: 100%; width: 100%; padding-left: 40px; padding-right: 40px; padding-top: 0; padding-bottom: 0;" />
-                    <ui:VisualElement name="Shadow" style="background-image: url(&apos;project://database/Assets/[%203%20][%20Assets%20]/[%20Textures%20]/[%20UI%20]/[%20Shadows%20]/Vertical%20Shadow.png?fileID=2800000&amp;guid=12fb6ac8346e1074bad566a39cba80c8&amp;type=3#Vertical Shadow&apos;); width: 100%; height: 25px; position: absolute; -unity-background-image-tint-color: rgba(255, 255, 255, 0.12); margin-top: 0; top: 100%;" />
-                </ui:Button>
             </ui:GroupBox>
-            <ui:GroupBox name="UserDetails" style="position: absolute; width: 100%; height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; display: none;">
+            <ui:GroupBox name="_UserDetailsLayout" style="position: absolute; width: 100%; height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; display: none;">
                 <ui:GroupBox name="Background" style="width: 100%; height: 100%; position: absolute; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; display: flex;">
                     <ui:VisualElement name="Background" style="background-image: url(&apos;project://database/Assets/[%203%20][%20Assets%20]/[%20Textures%20]/[%20UI%20]/[%20Backgrounds%20]/Cropped-Background.png?fileID=2800000&amp;guid=8d70f8ba4203c9742b4a138baad8d0b9&amp;type=3#Cropped-Background&apos;); width: 100%; height: 100%; position: absolute; top: 0; left: 0; right: 0; bottom: 0;" />
                 </ui:GroupBox>
                 <ui:GroupBox name="GroupBox" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; width: 100%; height: 90%; justify-content: flex-start; align-items: center; display: flex; top: 10%;">
                     <ui:GroupBox name="Title" style="width: 100%; height: 10%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; justify-content: center;">
-                        <ui:Label text="User Details:" display-tooltip-when-elided="true" name="TitleText" class="Title" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 40px;" />
+                        <ui:Label text="User Details:" display-tooltip-when-elided="true" name="TitleText" class="Title Header" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 40px;" />
                     </ui:GroupBox>
                     <ui:GroupBox name="UserDetails" style="align-items: center; width: 100%; height: 70%;">
                         <ui:GroupBox name="UserDetailsLayout" style="width: 90%; height: 100%; flex-direction: column;">
+                            <ui:Label tabindex="-1" text="Account" display-tooltip-when-elided="true" name="Account" class="Subheader" style="margin-left: 0; margin-right: 0; margin-top: 30px; margin-bottom: 30px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
                             <ui:GroupBox name="DepartmentGroup" style="flex-direction: row;">
-                                <ui:Label text="Department" display-tooltip-when-elided="true" name="Department" style="width: 30%;" />
-                                <ui:Label text="Department" display-tooltip-when-elided="true" name="Department" style="width: 70%;" />
+                                <ui:Label text="Department" display-tooltip-when-elided="true" name="DepartmentTitle" style="width: 35%; margin-left: 0; margin-right: 0; margin-top: 5px; margin-bottom: 5px;" />
+                                <ui:Label text="Department" display-tooltip-when-elided="true" name="DepartmentValue" style="width: 65%; padding-left: 10px; margin-left: 0; margin-right: 0; margin-top: 5px; margin-bottom: 5px; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
                             </ui:GroupBox>
                             <ui:GroupBox name="UsernameGroup" style="flex-direction: row;">
-                                <ui:Label text="Username" display-tooltip-when-elided="true" name="Username" style="width: 30%;" />
-                                <ui:Label text="Username" display-tooltip-when-elided="true" name="Username" style="width: 70%;" />
+                                <ui:Label text="Username" display-tooltip-when-elided="true" name="UsernameTitle" style="width: 35%; margin-left: 0; margin-right: 0; margin-top: 5px; margin-bottom: 5px;" />
+                                <ui:Label text="Username" display-tooltip-when-elided="true" name="UsernameValue" style="width: 65%; padding-left: 10px; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 0; margin-right: 0; margin-top: 5px; margin-bottom: 5px;" />
                             </ui:GroupBox>
-                            <ui:TextField picking-mode="Ignore" label="First Name" value="filler text" text="filler text" name="FirstNameInputField" style="margin-top: 55px;" />
-                            <ui:TextField picking-mode="Ignore" label="Last Name" value="filler text" text="filler text" name="LastNameInputField" />
-                            <ui:TextField picking-mode="Ignore" label="Password" value="filler text" text="filler text" name="PasswordInputField" />
-                            <ui:TextField picking-mode="Ignore" label="Email Address" value="filler text" text="filler text" name="EmailAddressInputField" />
-                            <ui:DropdownField label="County" index="-1" choices="System.Collections.Generic.List`1[System.String]" name="CountyDropdown" style="margin-top: 55px;" />
+                            <ui:TextField picking-mode="Ignore" label="First Name" text="filler text" name="FirstNameInputField" style="margin-top: 55px;" />
+                            <ui:TextField picking-mode="Ignore" label="Last Name" text="filler text" name="LastNameInputField" />
+                            <ui:TextField picking-mode="Ignore" label="Password" text="filler text" name="PasswordInputField" password="true" />
+                            <ui:TextField picking-mode="Ignore" label="Email Address" text="filler text" name="EmailAddressInputField" />
+                            <ui:Label tabindex="-1" text="Work" display-tooltip-when-elided="true" name="Work" class="Subheader" style="margin-left: 0; margin-right: 0; margin-top: 80px; margin-bottom: 30px; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0;" />
+                            <ui:DropdownField label="County" index="-1" choices="System.Collections.Generic.List`1[System.String]" name="CountyDropdown" style="margin-top: 5px;" />
                             <ui:DropdownField label="Region" index="-1" choices="System.Collections.Generic.List`1[System.String]" name="RegionDropdown" />
                             <ui:DropdownField label="District" index="-1" choices="System.Collections.Generic.List`1[System.String]" name="DistrictDropdown" style="height: 77px;" />
                             <ui:DropdownField label="Travel Distance" index="-1" choices="System.Collections.Generic.List`1[System.String]" name="TravelDistanceDropdown" />
@@ -160,18 +153,18 @@
                     </ui:GroupBox>
                     <ui:GroupBox name="Buttons" style="width: 100%; height: 20%; align-items: center; justify-content: center;">
                         <ui:GroupBox name="ButtonsLayout" style="width: 80%;">
-                            <ui:Button text="Update" display-tooltip-when-elided="true" />
+                            <ui:Button text="Update" display-tooltip-when-elided="true" name="UpdateChangesButton" />
                         </ui:GroupBox>
                     </ui:GroupBox>
                 </ui:GroupBox>
             </ui:GroupBox>
-            <ui:GroupBox name="ManageJobs" style="position: absolute; width: 100%; height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; display: none;">
+            <ui:GroupBox name="_ManageJobsLayout" style="position: absolute; width: 100%; height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; display: none;">
                 <ui:GroupBox name="Background" style="width: 100%; height: 100%; position: absolute; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; display: flex;">
                     <ui:VisualElement name="Background" style="background-image: url(&apos;project://database/Assets/[%203%20][%20Assets%20]/[%20Textures%20]/[%20UI%20]/[%20Backgrounds%20]/Cropped-Background.png?fileID=2800000&amp;guid=8d70f8ba4203c9742b4a138baad8d0b9&amp;type=3#Cropped-Background&apos;); width: 100%; height: 100%; position: absolute; top: 0; left: 0; right: 0; bottom: 0;" />
                 </ui:GroupBox>
                 <ui:GroupBox name="GroupBox" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; width: 100%; height: 90%; justify-content: flex-start; align-items: center; display: flex; left: auto; top: 10%;">
                     <ui:GroupBox name="Title" style="width: 100%; height: 10%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; justify-content: center;">
-                        <ui:Label text="Manage Jobs" display-tooltip-when-elided="true" name="TitleText" class="Title" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 40px;" />
+                        <ui:Label text="Manage Jobs" display-tooltip-when-elided="true" name="TitleText" class="Title Header" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 40px;" />
                     </ui:GroupBox>
                     <ui:GroupBox name="UserListLayoutContainer" style="width: 100%; height: 75%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; justify-content: center; align-items: center;">
                         <ui:GroupBox name="Contents" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; width: 90%; height: 100%; background-color: rgba(0, 0, 0, 0.11); border-left-width: 10px; border-right-width: 10px; border-top-width: 10px; border-bottom-width: 10px; border-top-left-radius: 10px; border-bottom-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-left-color: rgb(113, 165, 192); border-right-color: rgb(113, 165, 192); border-top-color: rgb(113, 165, 192); border-bottom-color: rgb(113, 165, 192);">
@@ -188,13 +181,13 @@
                     </ui:GroupBox>
                 </ui:GroupBox>
             </ui:GroupBox>
-            <ui:GroupBox name="JobDetails" style="position: absolute; width: 100%; height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; display: none;">
+            <ui:GroupBox name="_JobDetailsLayout" style="position: absolute; width: 100%; height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; display: none;">
                 <ui:GroupBox name="Background" style="width: 100%; height: 100%; position: absolute; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; display: flex;">
                     <ui:VisualElement name="Background" style="background-image: url(&apos;project://database/Assets/[%203%20][%20Assets%20]/[%20Textures%20]/[%20UI%20]/[%20Backgrounds%20]/Cropped-Background.png?fileID=2800000&amp;guid=8d70f8ba4203c9742b4a138baad8d0b9&amp;type=3#Cropped-Background&apos;); width: 100%; height: 100%; position: absolute; top: 0; left: 0; right: 0; bottom: 0;" />
                 </ui:GroupBox>
                 <ui:GroupBox name="GroupBox" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; width: 100%; height: 90%; justify-content: flex-start; align-items: center; display: flex; top: 10%;">
                     <ui:GroupBox name="Title" style="width: 100%; height: 10%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; justify-content: center;">
-                        <ui:Label text="Job Details:" display-tooltip-when-elided="true" name="TitleText" class="Title" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 40px;" />
+                        <ui:Label text="Job Details:" display-tooltip-when-elided="true" name="TitleText" class="Title Header" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 40px;" />
                     </ui:GroupBox>
                     <ui:GroupBox name="UserDetails" style="align-items: center; width: 100%; height: 70%;">
                         <ui:GroupBox name="UserDetailsLayout" style="width: 90%; height: 100%; flex-direction: column;">
@@ -226,13 +219,13 @@
                     </ui:GroupBox>
                 </ui:GroupBox>
             </ui:GroupBox>
-            <ui:GroupBox name="JobSkillDetails" style="position: absolute; width: 100%; height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; display: flex;">
+            <ui:GroupBox name="_JobSkillDetailsLayout" style="position: absolute; width: 100%; height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; display: none;">
                 <ui:GroupBox name="Background" style="width: 100%; height: 100%; position: absolute; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; display: flex;">
                     <ui:VisualElement name="Background" style="background-image: url(&apos;project://database/Assets/[%203%20][%20Assets%20]/[%20Textures%20]/[%20UI%20]/[%20Backgrounds%20]/Cropped-Background.png?fileID=2800000&amp;guid=8d70f8ba4203c9742b4a138baad8d0b9&amp;type=3#Cropped-Background&apos;); width: 100%; height: 100%; position: absolute; top: 0; left: 0; right: 0; bottom: 0;" />
                 </ui:GroupBox>
                 <ui:GroupBox name="GroupBox" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; width: 100%; height: 90%; justify-content: flex-start; align-items: center; display: flex; top: 10%;">
                     <ui:GroupBox name="Title" style="width: 100%; height: 10%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; justify-content: center;">
-                        <ui:Label text="Job Skill Details" display-tooltip-when-elided="true" name="TitleText" class="Title" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 40px;" />
+                        <ui:Label text="Job Skill Details" display-tooltip-when-elided="true" name="TitleText" class="Title Header" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 40px;" />
                     </ui:GroupBox>
                     <ui:GroupBox name="UserDetails" style="align-items: center; width: 100%; height: 70%;">
                         <ui:GroupBox name="UserDetailsLayout" style="width: 90%; height: 100%; flex-direction: column;">
@@ -264,49 +257,92 @@
                     </ui:GroupBox>
                 </ui:GroupBox>
             </ui:GroupBox>
-            <ui:GroupBox name="CreateJob" style="position: absolute; width: 100%; height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; display: none;">
+            <ui:GroupBox name="_CreateJobLayout" style="position: absolute; width: 100%; height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; display: none;">
                 <ui:GroupBox name="Background" style="width: 100%; height: 100%; position: absolute; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; display: flex;">
                     <ui:VisualElement name="Background" style="background-image: url(&apos;project://database/Assets/[%203%20][%20Assets%20]/[%20Textures%20]/[%20UI%20]/[%20Backgrounds%20]/Cropped-Background.png?fileID=2800000&amp;guid=8d70f8ba4203c9742b4a138baad8d0b9&amp;type=3#Cropped-Background&apos;); width: 100%; height: 100%; position: absolute; top: 0; left: 0; right: 0; bottom: 0;" />
                 </ui:GroupBox>
                 <ui:GroupBox name="GroupBox" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; width: 100%; height: 90%; justify-content: flex-start; align-items: center; display: flex; top: 10%;">
                     <ui:GroupBox name="Title" style="width: 100%; height: 10%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; justify-content: center;">
-                        <ui:Label text="Create Job:" display-tooltip-when-elided="true" name="TitleText" class="Title" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 40px;" />
+                        <ui:Label text="Create Job:" display-tooltip-when-elided="true" name="TitleText" class="Title Header" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 40px;" />
                     </ui:GroupBox>
                 </ui:GroupBox>
             </ui:GroupBox>
-            <ui:GroupBox name="UserSkills" style="position: absolute; width: 100%; height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; display: none;">
+            <ui:GroupBox name="_UserSkillsLayout" style="position: absolute; width: 100%; height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; display: none;">
                 <ui:GroupBox name="Background" style="width: 100%; height: 100%; position: absolute; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; display: flex;">
                     <ui:VisualElement name="Background" style="background-image: url(&apos;project://database/Assets/[%203%20][%20Assets%20]/[%20Textures%20]/[%20UI%20]/[%20Backgrounds%20]/Cropped-Background.png?fileID=2800000&amp;guid=8d70f8ba4203c9742b4a138baad8d0b9&amp;type=3#Cropped-Background&apos;); width: 100%; height: 100%; position: absolute; top: 0; left: 0; right: 0; bottom: 0;" />
                 </ui:GroupBox>
                 <ui:GroupBox name="GroupBox" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; width: 100%; height: 90%; justify-content: flex-start; align-items: center; display: flex; top: 10%;">
                     <ui:GroupBox name="Title" style="width: 100%; height: 10%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; justify-content: center;">
-                        <ui:Label text="User Skills:" display-tooltip-when-elided="true" name="TitleText" class="Title" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 40px;" />
+                        <ui:Label text="User Skills:" display-tooltip-when-elided="true" name="TitleText" class="Title Header" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 40px;" />
                     </ui:GroupBox>
                 </ui:GroupBox>
             </ui:GroupBox>
-            <ui:GroupBox name="UserShifts" style="position: absolute; width: 100%; height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; display: none;">
+            <ui:GroupBox name="_UserShiftsLayout" style="position: absolute; width: 100%; height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; display: none;">
                 <ui:GroupBox name="Background" style="width: 100%; height: 100%; position: absolute; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; display: flex;">
                     <ui:VisualElement name="Background" style="background-image: url(&apos;project://database/Assets/[%203%20][%20Assets%20]/[%20Textures%20]/[%20UI%20]/[%20Backgrounds%20]/Cropped-Background.png?fileID=2800000&amp;guid=8d70f8ba4203c9742b4a138baad8d0b9&amp;type=3#Cropped-Background&apos;); width: 100%; height: 100%; position: absolute; top: 0; left: 0; right: 0; bottom: 0;" />
                 </ui:GroupBox>
                 <ui:GroupBox name="GroupBox" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; width: 100%; height: 90%; justify-content: flex-start; align-items: center; display: flex; top: 10%;">
                     <ui:GroupBox name="Title" style="width: 100%; height: 10%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; justify-content: center;">
-                        <ui:Label text="User Shifts:" display-tooltip-when-elided="true" name="TitleText" class="Title" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 40px;" />
+                        <ui:Label text="User Shifts:" display-tooltip-when-elided="true" name="TitleText" class="Title Header" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 40px;" />
                     </ui:GroupBox>
                 </ui:GroupBox>
             </ui:GroupBox>
-            <ui:GroupBox name="JobSkillsToUsers" style="position: absolute; width: 100%; height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; display: none;">
+            <ui:GroupBox name="_JobSkillsToUsersLayout" style="position: absolute; width: 100%; height: 100%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; display: none;">
                 <ui:GroupBox name="Background" style="width: 100%; height: 100%; position: absolute; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; display: flex;">
                     <ui:VisualElement name="Background" style="background-image: url(&apos;project://database/Assets/[%203%20][%20Assets%20]/[%20Textures%20]/[%20UI%20]/[%20Backgrounds%20]/Cropped-Background.png?fileID=2800000&amp;guid=8d70f8ba4203c9742b4a138baad8d0b9&amp;type=3#Cropped-Background&apos;); width: 100%; height: 100%; position: absolute; top: 0; left: 0; right: 0; bottom: 0;" />
                 </ui:GroupBox>
                 <ui:GroupBox name="GroupBox" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; width: 100%; height: 90%; justify-content: flex-start; align-items: center; display: flex; top: 10%;">
                     <ui:GroupBox name="Title" style="width: 100%; height: 10%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; justify-content: center;">
-                        <ui:Label text="Job Skills To Users:" display-tooltip-when-elided="true" name="TitleText" class="Title" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 40px;" />
+                        <ui:Label text="Job Skills To Users:" display-tooltip-when-elided="true" name="TitleText" class="Title Header" style="padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; margin-left: 40px;" />
                     </ui:GroupBox>
                 </ui:GroupBox>
             </ui:GroupBox>
         </ui:GroupBox>
-        <ui:VisualElement name="NavigationBanner" style="justify-content: flex-end; align-items: center; flex-direction: column-reverse; width: 100%; min-height: auto; max-height: none; height: 10%; position: absolute; display: flex; min-width: auto; overflow: visible; top: 0;">
-            <ui:GroupBox name="Dropdown" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; width: 100%; height: 100px; display: none; position: relative; top: 0; flex-direction: column-reverse; justify-content: flex-end;" />
+        <ui:VisualElement name="_NavigationBannerLayout" style="justify-content: flex-end; align-items: center; flex-direction: column; width: 100%; min-height: auto; max-height: none; height: 10%; position: absolute; display: flex; min-width: auto; overflow: visible; top: 0;">
+            <ui:GroupBox name="DropdownLayout" style="margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; width: 100%; height: auto; display: none; position: absolute; top: 100%; flex-direction: column-reverse; justify-content: flex-end;">
+                <ui:Button display-tooltip-when-elided="true" name="LogoutButton" class="NavigationButton" style="align-items: center; width: 100%; height: 120px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; background-color: rgb(255, 255, 255); color: rgb(89, 89, 89); font-size: 40px; -unity-text-align: middle-left; overflow: visible; -unity-font-style: bold; justify-content: center;">
+                    <ui:Label text="Log Out" display-tooltip-when-elided="true" name="LogOutButton" class="NavigationButton NavigationDropdownButton" style="height: 100%; width: 100%; padding-left: 40px; padding-right: 40px; padding-top: 0; padding-bottom: 0;" />
+                    <ui:VisualElement name="Shadow" style="background-image: url(&apos;project://database/Assets/[%203%20][%20Assets%20]/[%20Textures%20]/[%20UI%20]/[%20Shadows%20]/Vertical%20Shadow.png?fileID=2800000&amp;guid=12fb6ac8346e1074bad566a39cba80c8&amp;type=3#Vertical Shadow&apos;); width: 100%; height: 25px; position: absolute; -unity-background-image-tint-color: rgba(255, 255, 255, 0.12); margin-top: 0; top: 100%;" />
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="UserPortalButton" style="width: 100%; height: 120px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; background-color: rgb(255, 255, 255); font-size: 40px; -unity-text-align: middle-left; color: rgb(105, 105, 106); visibility: visible; overflow: visible; align-items: center; -unity-font-style: bold; justify-content: center;">
+                    <ui:Label text="User Portal" display-tooltip-when-elided="true" name="UserPortalText" class="NavigationButton NavigationDropdownButton" style="height: 100%; width: 100%; padding-left: 40px; padding-right: 40px;" />
+                    <ui:VisualElement name="Shadow" style="background-image: url(&apos;project://database/Assets/[%203%20][%20Assets%20]/[%20Textures%20]/[%20UI%20]/[%20Shadows%20]/Vertical%20Shadow.png?fileID=2800000&amp;guid=12fb6ac8346e1074bad566a39cba80c8&amp;type=3#Vertical Shadow&apos;); width: 100%; height: 25px; position: absolute; -unity-background-image-tint-color: rgba(255, 255, 255, 0.12); margin-top: 0; top: 100%;" />
+                </ui:Button>
+                <ui:Button display-tooltip-when-elided="true" name="ManageUserDetailsButton" class="NavigationButton" style="align-items: center; width: 100%; height: 120px; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-top-left-radius: 0; border-bottom-left-radius: 0; border-top-right-radius: 0; border-bottom-right-radius: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; background-color: rgb(255, 255, 255); color: rgb(89, 89, 89); font-size: 40px; -unity-text-align: middle-left; overflow: visible; -unity-font-style: bold; justify-content: center;">
+                    <ui:Label text="Manage User Details" display-tooltip-when-elided="true" name="ManageUserDetailsText" class="NavigationButton NavigationDropdownButton" style="height: 100%; width: 100%; padding-left: 40px; padding-right: 40px; padding-top: 0; padding-bottom: 0;" />
+                    <ui:VisualElement name="Shadow" style="background-image: url(&apos;project://database/Assets/[%203%20][%20Assets%20]/[%20Textures%20]/[%20UI%20]/[%20Shadows%20]/Vertical%20Shadow.png?fileID=2800000&amp;guid=12fb6ac8346e1074bad566a39cba80c8&amp;type=3#Vertical Shadow&apos;); width: 100%; height: 25px; position: absolute; -unity-background-image-tint-color: rgba(255, 255, 255, 0.12); margin-top: 0; top: 100%;" />
+                </ui:Button>
+            </ui:GroupBox>
+            <ui:VisualElement name="BannerLayout" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); width: 100%; height: 100%; position: absolute;">
+                <ui:VisualElement name="Mask" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); overflow: hidden; flex-direction: row;">
+                    <ui:GroupBox name="Background" style="width: 100%; height: 1000%; position: absolute; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; display: flex; background-color: rgb(255, 255, 255);" />
+                    <ui:VisualElement name="Left" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); align-items: flex-start; justify-content: center; width: 50%;">
+                        <SquareElement Type="Height" style="height: 100%; justify-content: center; align-items: center;">
+                            <ui:Button display-tooltip-when-elided="true" name="NavigationBannerDropdownButton" class="NavigationWaffleButton" style="width: 65%; height: 65%; background-color: rgb(255, 255, 255); border-left-color: rgb(150, 174, 195); border-right-color: rgb(150, 174, 195); border-top-color: rgb(150, 174, 195); border-bottom-color: rgb(150, 174, 195); border-top-left-radius: 30px; border-bottom-left-radius: 30px; border-top-right-radius: 30px; border-bottom-right-radius: 30px;">
+                                <ui:VisualElement style="flex-grow: 1; background-color: rgba(208, 223, 236, 0); background-image: url(&apos;project://database/Assets/[%203%20][%20Assets%20]/[%20Textures%20]/[%20UI%20]/[%20Buttons%20]/Hamburger%20Button%20White.png?fileID=2800000&amp;guid=3c8515f856915b84bb506407f2516c41&amp;type=3#Hamburger Button White&apos;); -unity-background-image-tint-color: rgb(150, 174, 195);" />
+                            </ui:Button>
+                        </SquareElement>
+                    </ui:VisualElement>
+                    <ui:VisualElement name="Right" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); align-items: flex-end; justify-content: center; width: 50%;">
+                        <SquareElement Type="Height" style="height: 100%; justify-content: center; align-items: flex-end;">
+                            <ui:VisualElement style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); background-image: url(&apos;project://database/Assets/[%203%20][%20Assets%20]/[%20Textures%20]/[%20UI%20]/[%20Logos%20]/Network%20Rail%20Logo%20-%20Transparent.jpg?fileID=2800000&amp;guid=284550c6afe14d24287a1dc9725d598e&amp;type=3#Network Rail Logo - Transparent&apos;); -unity-background-scale-mode: scale-to-fit; height: 100%; width: 100%; justify-content: center; align-items: flex-end; align-self: auto; margin-left: 40px; margin-right: 40px; margin-top: 40px; margin-bottom: 40px;" />
+                        </SquareElement>
+                    </ui:VisualElement>
+                </ui:VisualElement>
+                <ui:VisualElement name="Shadow" style="background-image: url(&apos;project://database/Assets/[%203%20][%20Assets%20]/[%20Textures%20]/[%20UI%20]/[%20Shadows%20]/Vertical%20Shadow.png?fileID=2800000&amp;guid=12fb6ac8346e1074bad566a39cba80c8&amp;type=3#Vertical Shadow&apos;); width: 100%; height: 25px; position: absolute; -unity-background-image-tint-color: rgba(255, 255, 255, 0.12); margin-top: 0; top: 100%;" />
+            </ui:VisualElement>
+        </ui:VisualElement>
+        <ui:VisualElement name="_NotificationLayout" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); position: absolute; max-height: none; width: 100%; height: 100%; align-items: center; display: none;">
+            <ui:GroupBox name="Fade" style="background-color: rgba(0, 0, 0, 0.24); position: absolute; width: 100%; height: 100%;" />
+            <ui:GroupBox name="Top" style="width: 100%; height: 40%; justify-content: center; align-items: center;">
+                <ui:GroupBox name="Notification" style="justify-content: flex-start; align-items: center; width: auto; height: auto; min-width: 50%; min-height: 5%; max-width: 80%; max-height: 60%; padding-left: 2%; padding-right: 2%; padding-top: 2%; padding-bottom: 2%; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; background-color: rgb(255, 255, 255); -unity-background-image-tint-color: rgb(255, 255, 255); border-left-color: rgb(115, 133, 149); border-right-color: rgb(115, 133, 149); border-top-color: rgb(115, 133, 149); border-bottom-color: rgb(115, 133, 149); border-left-width: 10px; border-right-width: 10px; border-top-width: 10px; border-bottom-width: 10px; border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; flex-grow: 0;">
+                    <SquareElement style="position: absolute; width: 100px; left: auto; right: -115px; top: -10px; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-top-left-radius: 5px; border-bottom-left-radius: 5px; border-top-right-radius: 5px; border-bottom-right-radius: 5px; border-left-color: rgb(150, 174, 195); border-right-color: rgb(150, 174, 195); border-top-color: rgb(150, 174, 195); border-bottom-color: rgb(150, 174, 195);">
+                        <ui:Button text="X" display-tooltip-when-elided="true" name="CloseButton" style="position: relative; margin-left: 0; margin-right: 0; margin-top: 0; margin-bottom: 0; padding-left: 0; padding-right: 0; padding-top: 0; padding-bottom: 0; width: 100%; height: 100%; border-left-color: rgb(115, 133, 149); border-right-color: rgb(115, 133, 149); border-top-color: rgb(115, 133, 149); border-bottom-color: rgb(115, 133, 149); background-color: rgb(255, 255, 255); color: rgb(150, 174, 195); -unity-font-style: bold;" />
+                    </SquareElement>
+                    <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" name="NotificationTitle" class="Title Subheader" />
+                    <ui:Label tabindex="-1" text="sfsdf" display-tooltip-when-elided="true" name="NotificationText" style="white-space: normal;" />
+                </ui:GroupBox>
+            </ui:GroupBox>
         </ui:VisualElement>
     </ui:GroupBox>
 </ui:UXML>

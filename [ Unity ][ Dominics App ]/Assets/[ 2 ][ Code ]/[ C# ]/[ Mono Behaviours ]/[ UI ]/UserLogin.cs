@@ -3,27 +3,27 @@ using NetworkRail.SQL;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class UserLogin : MonoBehaviour
+public class UserLogin : _UILayoutInterface
 {
 	#region [ Document References ]
 	// - - -
 		private UIDocument _document;
-		
 		private VisualElement _root;
-		private VisualElement _navigationBanner;
-		private VisualElement _userLogin;
-		private VisualElement _userPortal;
-
-		private UserPortal _userPortalScript;
+		
+		private VisualElement _navigationBannerLayout;
+		private VisualElement _userLoginLayout;
+		private VisualElement _userPortalLayout;
+		
+		private DropdownField _departmentDropdown;
+		private TextField _usernameField;
+		private TextField _passwordField;
+		private Button _loginButton;
 	// - - -
 	#endregion
 
 	#region [ References ]
 	// - - -
-		private DropdownField _departmentDropdown;
-		private TextField _usernameField;
-		private TextField _passwordField;
-		private Button _loginButton;
+		private UserPortal _userPortal;
 	// - - -
 	#endregion
 	
@@ -34,18 +34,18 @@ public class UserLogin : MonoBehaviour
 	private void Awake()
 	{
 		_document = FindObjectOfType<UIDocument>();
-		_userPortalScript = FindObjectOfType<UserPortal>();
+		_userPortal = FindObjectOfType<UserPortal>();
 		
 		_root = _document.rootVisualElement;
 
-		_navigationBanner = _root.Q<VisualElement>("NavigationBanner");
-		_userLogin = _root.Q<VisualElement>("UserLogin");
-		_userPortal = _root.Q<VisualElement>("UserPortal");
+		_navigationBannerLayout = _root.Q<VisualElement>("_NavigationBannerLayout");
+		_userLoginLayout		= _root.Q<VisualElement>("_UserLoginLayout");
+		_userPortalLayout		= _root.Q<VisualElement>("_UserPortalLayout");
 		
-		_departmentDropdown = _userLogin.Q<DropdownField>("DepartmentDropdown");
-		_usernameField = _userLogin.Q<TextField>("UsernameField");
-		_passwordField = _userLogin.Q<TextField>("PasswordField");
-		_loginButton = _userLogin.Q<Button>("LoginButton");
+		_departmentDropdown = _userLoginLayout.Q<DropdownField>("DepartmentDropdown");
+		_usernameField		= _userLoginLayout.Q<TextField>("UsernameField");
+		_passwordField		= _userLoginLayout.Q<TextField>("PasswordField");
+		_loginButton		= _userLoginLayout.Q<Button>("LoginButton");
 	}
 
 	private void OnEnable()
@@ -60,13 +60,11 @@ public class UserLogin : MonoBehaviour
 		_loginButton.UnregisterCallback<ClickEvent>(OnLoginButtonPressed);
 	}
 
-	private void Start() => SetUIDefaults();
-
 	
 	
-	public void SetUIDefaults()
+	public override void ResetUIDefaults()
 	{
-		_departmentDropdown.choices = SQLManager.QueryListOfDepartments();
+		_departmentDropdown.choices = Query.ListJobDepartment().departments;
 		_departmentDropdown.index = -1;
 		
 		_usernameField.SetEnabled(false);
@@ -84,22 +82,21 @@ public class UserLogin : MonoBehaviour
 	
 	private void OnLoginButtonPressed(ClickEvent clickEvent)
 	{
-		SQLManager.LoginQueryResults results = SQLManager.QueryLogin(_departmentDropdown.value, _usernameField.value, _passwordField.value);
-		Debug.Log($"{((results.resultLoginSuccess) ? ("[ Successful Login ]") : ("[ Unsuccessful Login ]"))} - [{results.resultMessage}]");
-		
-		if (results.resultLoginSuccess)
-		{
-			UIManager.Enable(_navigationBanner);
-			UIManager.Swap(_userLogin, _userPortal, true);
+		Query.QueryResultValidateLogin results = Query.ValidateLogin(_departmentDropdown.value, _usernameField.value, _passwordField.value);
 
-			UserData.Department = _departmentDropdown.value;
-			UserData.Username = _usernameField.text;
-			
-			_userPortalScript.SetUIDefaults();
-		}
-		else
+		switch (results.loginSuccess)
 		{
-			NotificationManager.Instance.ShowNotification("Login Error", results.resultMessage);
+			case false: NotificationManager.Instance.ShowNotification("Login Error", results.message); break;
+			case true:
+			{
+				UIManager.Enable(_navigationBannerLayout);
+				UIManager.Swap(_userLoginLayout, _userPortalLayout, true);
+
+				UserData.Department = _departmentDropdown.value;
+				UserData.Username = _usernameField.text;
+			
+				_userPortal.ResetUIDefaults();
+			} break;
 		}
 	}
 }

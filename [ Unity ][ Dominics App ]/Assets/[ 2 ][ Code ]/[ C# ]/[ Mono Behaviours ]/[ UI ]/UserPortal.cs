@@ -5,24 +5,19 @@ using NetworkRail.SQL;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-public class UserPortal : MonoBehaviour
+public class UserPortal : _UILayoutInterface
 {
     #region [ Document References ]
     // - - -
         private UIDocument _document;
-        
         private VisualElement _root;
-        private VisualElement _userPortal;
         
-        private VisualElement _manageUsers;
-        private VisualElement _manageJobs;
-        private VisualElement _userSkills;
-        private VisualElement _shiftsAvailable;
-    // - - -
-    #endregion
-
-    #region [ References ]
-    // - - -
+        private VisualElement _userPortalLayout;
+        private VisualElement _manageUsersLayout;
+        private VisualElement _manageJobsLayout;
+        private VisualElement _userSkillsLayout;
+        private VisualElement _userShiftsLayout;
+        
         private Label _userDetailsDepartment;
         private Label _userDetailsUsername;
         private Label _userDetailsFullname;
@@ -41,9 +36,18 @@ public class UserPortal : MonoBehaviour
     // - - -
     #endregion
 
+    #region [ References ]
+    // - - -
+        private ManageUsers _manageUsers;
+        private ManageJobs _manageJobs;
+        private UserShifts _userShifts;
+        private UserSkills _userSkills;
+    // - - -
+    #endregion
+
     #region [ Behaviour ]
     // - - -
-        private SQLManager.UserPortalQueryResult _userPortalData;
+        private Query.QueryResultUserPortal _userPortalData;
     // - - -
     #endregion
     
@@ -56,39 +60,36 @@ public class UserPortal : MonoBehaviour
         _document = FindObjectOfType<UIDocument>();
         _root = _document.rootVisualElement;
 
-        _userPortal = _root.Q<VisualElement>("UserPortal");
+        _manageUsers = FindObjectOfType<ManageUsers>();
+        _manageJobs = FindObjectOfType<ManageJobs>();
+        _userShifts = FindObjectOfType<UserShifts>();
+        _userSkills = FindObjectOfType<UserSkills>();
         
-        _manageUsers = _root.Q<VisualElement>("ManageUsers");
-        _manageJobs = _root.Q<VisualElement>("ManageJobs");
-        _userSkills = _root.Q<VisualElement>("UserSkills");
-        _shiftsAvailable = _root.Q<VisualElement>("ShiftsAvailable");
+        _userPortalLayout       = _root.Q<VisualElement>("_UserPortalLayout");
+        _manageUsersLayout      = _root.Q<VisualElement>("_ManageUsersLayout");
+        _manageJobsLayout       = _root.Q<VisualElement>("_ManageJobsLayout");
+        _userSkillsLayout       = _root.Q<VisualElement>("_UserSkillsLayout");
+        _userShiftsLayout       = _root.Q<VisualElement>("_UserShiftsLayout");
 
-        #region [ User Data ]
-            VisualElement userData = _userPortal.Q<VisualElement>("UserData");
-            
-            _userDetailsDepartment = userData.Q<Label>("Department");
-            _userDetailsUsername = userData.Q<Label>("Username");
-            _userDetailsFullname = userData.Q<Label>("FullName");
-        #endregion
+        
+        VisualElement userData  = _userPortalLayout.Q<VisualElement>("UserData");
+        
+        _userDetailsDepartment  = userData.Q<Label>("Department");
+        _userDetailsUsername    = userData.Q<Label>("Username");
+        _userDetailsFullname    = userData.Q<Label>("FullName");
 
-        #region [ Resources ]
-            VisualElement resources = _userPortal.Q<VisualElement>("Resources");
+        
+        VisualElement resources = _userPortalLayout.Q<VisualElement>("Resources");
             
-            #region [ Job Controller ]
-                _jobControllerMenuButton = resources.Q<Button>("JobController");
-                _jobControllerResources = resources.Q<VisualElement>("JobControllerResources");
-                
-                _manageUserButton = _jobControllerResources.Q<Button>("ManageUsersButton");
-                _manageJobsButton = _jobControllerResources.Q<Button>("ManageJobsButton");
-            #endregion
-            #region [ PTS Holder ]
-                _PTSHolderMenuButton = resources.Q<Button>("PTSHolder");
-                _PTSHolderResources = resources.Q<VisualElement>("PTSHolderResources");
-                
-                _userSkillsButton = _PTSHolderResources.Q<Button>("UserSkillsButton");
-                _shiftsAvailableButton = _PTSHolderResources.Q<Button>("ShiftsAvailableButton");
-            #endregion
-        #endregion
+        _jobControllerMenuButton    = resources.Q<Button>("JobController");
+        _jobControllerResources     = resources.Q<VisualElement>("JobControllerResources");
+        _manageUserButton           = _jobControllerResources.Q<Button>("ManageUsersButton");
+        _manageJobsButton           = _jobControllerResources.Q<Button>("ManageJobsButton");
+
+        _PTSHolderMenuButton        = resources.Q<Button>("PTSHolder");
+        _PTSHolderResources         = resources.Q<VisualElement>("PTSHolderResources");
+        _userSkillsButton           = _PTSHolderResources.Q<Button>("UserSkillsButton");
+        _shiftsAvailableButton      = _PTSHolderResources.Q<Button>("ShiftsAvailableButton");
     }
 
     private void OnEnable()
@@ -115,29 +116,24 @@ public class UserPortal : MonoBehaviour
 
     
 
-    public void SetUIDefaults()
+    public override void ResetUIDefaults()
     {
-        _userPortalData = SQLManager.QueryUserPortal(UserData.Department, UserData.Username);
-
-        Debug.Log($"Department: {_userPortalData.resultDepartment}");
-        Debug.Log($"Username: {_userPortalData.resultUsername}");
-        Debug.Log($"Full Name: {_userPortalData.resultFullName}");
+        _userPortalData = Query.UserPortal(UserData.Department, UserData.Username);
         
-        _userDetailsDepartment.text = $"Department: {_userPortalData.resultDepartment}";
-        _userDetailsUsername.text = $"Username: {_userPortalData.resultUsername}";
-        _userDetailsFullname.text = $"Full Name: {_userPortalData.resultFullName}";
+        _userDetailsDepartment.text = $"Department: {_userPortalData.department}";
+        _userDetailsUsername.text = $"Username: {_userPortalData.username}";
+        _userDetailsFullname.text = $"Full Name: {_userPortalData.fullName}";
         
         
-        
-        _jobControllerMenuButton.SetEnabled(_userPortalData.resultJobControllerPermission);
-        switch (_userPortalData.resultJobControllerPermission)
+        _jobControllerMenuButton.SetEnabled(_userPortalData.managementPermission);
+        switch (_userPortalData.managementPermission)
         {
             case true: UIManager.Enable(_jobControllerResources); break;
             case false: UIManager.Disable(_jobControllerResources); break;
         }
         
-        _PTSHolderMenuButton.SetEnabled(_userPortalData.resultPTSHolderPermission);
-        switch ((!_userPortalData.resultJobControllerPermission) && _userPortalData.resultPTSHolderPermission)
+        _PTSHolderMenuButton.SetEnabled(_userPortalData.PTSHolderPermission);
+        switch ((!_userPortalData.managementPermission) && _userPortalData.PTSHolderPermission)
         {
             case true: UIManager.Enable(_PTSHolderResources); break;
             case false: UIManager.Disable(_PTSHolderResources); break;
@@ -158,21 +154,25 @@ public class UserPortal : MonoBehaviour
 
     private void OnManageUsersButtonPressed(ClickEvent clickEvent)
     {
-        UIManager.Swap(_userPortal, _manageUsers, true);   
+        UIManager.Swap(_userPortalLayout, _manageUsersLayout, true);   
+        _manageUsers.ResetUIDefaults();
     }
 
     private void OnManageJobsButtonPressed(ClickEvent clickEvent)
     {
-        UIManager.Swap(_userPortal, _manageJobs, true);
+        UIManager.Swap(_userPortalLayout, _manageJobsLayout, true);
+        _manageJobs.ResetUIDefaults();
     }
 
     private void OnUserSkillsButtonPressed(ClickEvent clickEvent)
     {
-        UIManager.Swap(_userPortal, _userSkills, true);
+        UIManager.Swap(_userPortalLayout, _userSkillsLayout, true);
+        _userSkills.ResetUIDefaults();
     }
 
     private void OnShiftsAvailableButtonPressed(ClickEvent clickEvent)
     {
-        UIManager.Swap(_userPortal, _shiftsAvailable, true);
+        UIManager.Swap(_userPortalLayout, _userShiftsLayout, true);
+        _userShifts.ResetUIDefaults();
     }
 }
